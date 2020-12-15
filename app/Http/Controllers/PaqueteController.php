@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class PaqueteController extends Controller
 {
  public function add(){
-     echo "hola";
+     echo "h";
  }
 }
