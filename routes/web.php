@@ -28,6 +28,9 @@ Route::get('/nosotros', function () {
 Route::get('/reservar', function () {
     return view('Reservas');
 });
+Route::get('/nuevopaquete', function () {
+    return view('Paquetes/nuevo');
+});
 
 
 
