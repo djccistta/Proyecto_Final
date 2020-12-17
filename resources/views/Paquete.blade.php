@@ -60,7 +60,7 @@
                         <h5 class="card-title">Nombre del Paquete</h5>
                         <p class="card-text">Detalles:</p>
                         <p class="card-text">Precio:</p>
-                        <a href="/reservar" class="btn btn-primary">Ver Mas</a>
+                        <a href="/reservar" class="btn btn-primary">Reservar</a>
                     </div>
                 </div>
 
@@ -76,7 +76,7 @@
                         <h5 class="card-title">Nombre del Paquete</h5>
                         <p class="card-text">Detalles:</p>
                         <p class="card-text">Precio:</p>
-                        <a href="/reservar" class="btn btn-primary">Ver Mas</a>
+                        <a href="/reservar" class="btn btn-primary">Reservar</a>
                     </div>
                 </div>
 
