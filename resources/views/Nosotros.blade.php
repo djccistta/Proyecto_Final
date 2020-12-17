@@ -50,7 +50,6 @@
         <div class="container mt-5 mb-5">
           
         
-        TENEMOS QUE FLOREAR MANO
         </div>
 
         <footer class="bg-light mt-3">

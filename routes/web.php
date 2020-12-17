@@ -37,7 +37,7 @@ Route::get('/nuevopaquete', function () {
 
 
 
-Auth::routes();
+Auth::routes(['reset'=>false]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('Admin');
 
