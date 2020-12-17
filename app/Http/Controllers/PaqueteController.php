@@ -25,10 +25,6 @@ class PaqueteController extends Controller
         {
             $Paquete['foto']=$req->file('foto')->store('imagenes','public');
         }
-        if($req->hasFile('archivo'))
-        {
-            $Paquete['archivo']=$req->file('archivo')->store('Libros','public');
-        }
         $Paquete->save();
         return back()->with('Crear_Paquete','El paquete se creo correctamente');
     }
