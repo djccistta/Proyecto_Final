@@ -23,7 +23,8 @@ class ReservaController extends Controller
         $save->nroniños=$req->nniños;
 
         $save->save();
-        return back();
+
+        return $this->lista();
 
     }
     public function lista(){
