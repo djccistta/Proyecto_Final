@@ -38,7 +38,7 @@ class ReservaController extends Controller
 
     }
     public function update(){
-        return "te la creite perro";
+        return "nada aun";
 
     }
 
