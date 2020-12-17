@@ -34,7 +34,7 @@ Route::get('/nuevopaquete', function () {
     return view('Paquetes/nuevo');
 });
 
-
+Route::post('/Crear','App\Http\Controllers\PaqueteController@CrearPaquete')->name('CrearPaquete');
 
 
 Auth::routes(['reset'=>false]);
@@ -55,3 +55,4 @@ Route::get('/elimina/{res}',[App\Http\Controllers\ReservaController::class, 'del
 ->name("reserve.delete");
 Route::get('/actualizar',[App\Http\Controllers\ReservaController::class, 'update'])
 ->name("update");
+
