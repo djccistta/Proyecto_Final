@@ -6,17 +6,18 @@
     <table class="table">
         <h2 class="text-danger justify-heading"> <b>Reservas:</b> </h2>
         <div class="form-group">
-            <a href="{{ route('nuevo') }}"> 
+            <a href="{{ route('nuevo') }}">
                 <button class="btn btn-primary ">
                     <font color="white"> Nuevo </font>
-                </button> 
+                </button>
             </a>
         </div>
         <caption>Lista de Reservas</caption>
+        <?php $cuenta=1; ?>
         <thead>
             <tr>
                 <th scope="col">N°</th>
-                <th scope="col">Paquete</th>
+                <!-- <th scope="col">Paquete</th> -->
                 <th scope="col">Nombre</th>
                 <th scope="col">Apellido</th>
                 <th scope="col">Fecha</th>
@@ -24,26 +25,31 @@
                 <th scope="col">E-mail</th>
                 <th scope="col">N° Adultos</th>
                 <th scope="col">N° Niños</th>
-                <th scope="col">Total</th>
+                <!-- <th scope="col">Total</th> -->
                 <th scope="col">Acción</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th scope="row">1asa</th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                @foreach($reserva as $res)
+            <tr>
+                <td> <?php  echo $cuenta;
+                        $cuenta++; ?> </td>
+                <td>{{ $res->nombrepersona }}</td>
+                <td>{{ $res->apellidopersona }}</td>
+                <td>{{ $res->fecha }}</td>
+                <td>{{ $res->telefono }}</td>
+                <td>{{ $res->correo }}</td>
+                <td>{{ $res->nroadultos }}</td>
+                <td>{{ $res->nroniños }}</td>
                 <td>
-                    <a href="" class="btn btn-warning"><b>Actualizar</b></a>
-                    <a href="" class="btn btn-danger"><b>Eliminar</b></a>
+                    <a href="{{route('update')}}" class="btn btn-danger"><b>Actualizar</b></a>
+                    <a href="{{route('reserve.delete', $res)}}" class="btn btn-warning"><b>Eliminar</b></a>
                 </td>
+            </tr>
+
+            @endforeach
+
             </tr>
         </tbody>
     </table>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\reserva;
 use Illuminate\Http\Request;
+use PhpParser\Node\Stmt\Return_;
 
 class ReservaController extends Controller
 {
@@ -25,4 +26,20 @@ class ReservaController extends Controller
         return back();
 
     }
+    public function lista(){
+        return view('reservas.index', [
+            'reserva' => reserva::paginate()
+        ]);
+        
+    }
+    public function delete(reserva $res){
+        $res->delete();
+        return $this->lista();
+
+    }
+    public function update(){
+        return "te la creite perro";
+
+    }
+
 }

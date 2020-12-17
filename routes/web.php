@@ -34,8 +34,6 @@ Route::get('/nuevopaquete', function () {
     return view('Paquetes/nuevo');
 });
 
-Route::post('/reserva.nuevo',[App\Http\Controllers\ReservaController::class, 'savereserve'])
-->name('savereserve');
 
 
 
@@ -44,6 +42,16 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('Admin');
 
 Route::get('/reservas', [App\Http\Controllers\HomeController::class, 'reservas'])->name('Admin');
-
+//muestra el formulario de reservas
 Route::get('/reservas.nuevo', [App\Http\Controllers\ReservaController::class, 'nuevo'])->name('nuevo');
-
+//guarda en la base de datos
+Route::post('/reserva.nuevo',[App\Http\Controllers\ReservaController::class, 'savereserve'])
+->name('savereserve');
+//lista las reservas
+Route::get('/reservas', [App\Http\Controllers\ReservaController::class, 'lista'])
+->name('reserva.lista');
+//elimina un reserva
+Route::get('/elimina/{res}',[App\Http\Controllers\ReservaController::class, 'delete'])
+->name("reserve.delete");
+Route::get('/actualizar',[App\Http\Controllers\ReservaController::class, 'update'])
+->name("update");

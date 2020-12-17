@@ -10,7 +10,6 @@
 
     </head>
     <body >
-    <a class="nav-link" href="{{ route('new') }}">nasfjfhalsjdfhalsdjfhajf</a>
 
         
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
