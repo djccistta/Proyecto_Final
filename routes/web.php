@@ -30,6 +30,9 @@ Route::get('/nosotros', function () {
 Route::get('/reservar', function () {
     return view('Reservas');
 });
+Route::get('/nuevopaquete', function () {
+    return view('Paquetes/nuevo');
+});
 
 Route::post('/reserva.nuevo',[App\Http\Controllers\ReservaController::class, 'savereserve'])
 ->name('savereserve');
