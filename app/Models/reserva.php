@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class reserva extends Model
 {
-    use HasFactory;
+    protected $fillable = ['nombrepersona','apellidopersona','telefono','correo','nroadultos','nrommiños','fecha','total'];
+   
 }

@@ -12,7 +12,7 @@
     <body >
         <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
             <div class="container">
-                <a class="navbar-brand" href="#"><b>Logooo</b> </a>
+                <a class="navbar-brand" href="#"><b>Logo</b> </a>
 
                 <div class="collapse navbar-collapse  justify-content-end " id="navbarNavDropdown" >
                     <ul class="navbar-nav " >
@@ -107,11 +107,12 @@
                     <div class="col-md-3">
                         <a class="nav-link text-dark" href="/">Inicio</a>
                         <a class="nav-link text-dark" href="/paquete">Paquetes</a>
+                        <a class="nav-link " href="{{ route('nuevo') }}">Reservas</a>
                         <a class="nav-link text-dark" href="/contactanos">Contactanos</a>
                         <a class="nav-link text-dark" href="/nosotros">Nosotros</a>
                    </div>
                     <div class="col-md-3">
-                            logoooooo
+                            logo
                     </div>
                 </nav>
             </div>

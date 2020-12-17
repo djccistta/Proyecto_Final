@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,9 +31,8 @@ Route::get('/reservar', function () {
     return view('Reservas');
 });
 
-
-
-
+Route::post('/reserva.nuevo',[App\Http\Controllers\ReservaController::class, 'savereserve'])
+->name('savereserve');
 
 
 
@@ -41,3 +41,6 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('Admin');
 
 Route::get('/reservas', [App\Http\Controllers\HomeController::class, 'reservas'])->name('Admin');
+
+Route::get('/reservas.nuevo', [App\Http\Controllers\ReservaController::class, 'nuevo'])->name('nuevo');
+

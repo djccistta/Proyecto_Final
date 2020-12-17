@@ -10,10 +10,12 @@
 
     </head>
     <body >
+    <a class="nav-link" href="{{ route('new') }}">nasfjfhalsjdfhalsdjfhajf</a>
+
         
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
-                <a class="navbar-brand" href="#"> <b>Logooo</b> </a>
+                <a class="navbar-brand" href="#"> <b>Logo</b> </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -25,6 +27,9 @@
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link " href="/paquete">Paquetes</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link " href="{{ route('nuevo') }}">Reservas</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/contactanos">Contactanos</a>
@@ -89,6 +94,7 @@
                     <div class="col-md-3">
                         <a class="nav-link text-dark" href="/">Inicio</a>
                         <a class="nav-link text-dark" href="/paquete">Paquetes</a>
+                        <a class="nav-link text-dark" href="{{ route('nuevo') }}">Reservas</a>
                         <a class="nav-link text-dark" href="/contactanos">Contactanos</a>
                         <a class="nav-link text-dark" href="/nosotros">Nosotros</a>
                 </div>

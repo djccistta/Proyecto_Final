@@ -21,8 +21,7 @@ class CreateReservasTable extends Migration
             $table->string('correo');
             $table->string('nroadultos');
             $table->integer('nroniños');
-            $table->integer('fecha');
-            $table->decimal('total');
+            $table->date('fecha');
             $table->timestamps();
         });
     }

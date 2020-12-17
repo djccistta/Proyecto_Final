@@ -26,6 +26,9 @@
                         <li class="nav-item ">
                             <a class="nav-link " href="/paquete">Paquetes</a>
                         </li>
+                        <li class="nav-item ">
+                            <a class="nav-link " href="{{ route('nuevo') }}">Reservas</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/contactanos">Contactanos</a>
                         </li>
