@@ -35,7 +35,11 @@ Route::get('/nuevopaquete', function () {
 });
 
 Route::post('/Crear','App\Http\Controllers\PaqueteController@CrearPaquete')->name('CrearPaquete');
-
+Route::get('/Paquetes', [App\Http\Controllers\PaqueteController::class, 'ListaPaquete'])
+->name('Paquete.lista');
+Route::get('/Actualizar/{id}','App\Http\Controllers\PaqueteController@Actualizar1');
+Route::post('/GuardarActualizacion','App\Http\Controllers\PaqueteController@Actualizar2')->name('ActualizarPaquete');
+Route::get('/Borrar/{id}','App\Http\Controllers\PaqueteController@BorrarPaquete');
 
 Auth::routes(['reset'=>false]);
 

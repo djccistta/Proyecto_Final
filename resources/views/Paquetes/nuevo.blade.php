@@ -8,6 +8,11 @@
         <h3 class="text text-danger"> <b>Nuevo Paquete:</b> </h3>
         <form action="{{(route('CrearPaquete'))}}" method="POST" enctype="multipart/form-data">
             <div class="form-group">
+            @if(Session::has('Crear_Paquete'))
+                    <div class="alert alert-succes" role="alert">
+                    {{Session::get('Crear_Paquete')}}
+                    </div>
+            @endif
                 <label for="Nombre"> Nombre:</label>
                 <input type="text" name="nombre" class="form-control"  id="Nombre" placeholder="Ingrese Nombre del Paquete" Required>
             </div>
@@ -46,8 +51,3 @@
 </div>
 
 @endsection
-@if(Session::has('Crear_Paquete'))
-                                <div class="alert alert-succes" role="alert">
-                                {{Session::get('Crear_Libro')}}
-                                </div>
-                                @endif

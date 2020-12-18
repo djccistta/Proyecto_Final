@@ -8,9 +8,10 @@
 
         <form action="">
             <div class="form-group">
-                <button type="submit"  href="#" class="btn btn-primary ">
-                    <b>Nuevo</b> 
-                </button>
+              
+                    
+                    <a href="/nuevopaquete" class="btn btn-primary " ><b>Nuevo</b> </a>
+               
             </div>
         </form>
 
@@ -27,18 +28,20 @@
             </tr>
         </thead>
         <tbody>
+        @foreach($Paquete as $res) 
             <tr>
-                <th scope="row">1</th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <th scope="row">{{$res->id}}</th>
+                <td><img src="{{asset('storage').'/'.$res->foto}}" alt="foto" width="200" height="130" ></td>
+                <td>{{$res->nombre}}</td>
+                <td>{{$res->categoria}}</td>
+                <td>{{$res->descripcion}}</td>
+                <td>{{$res->precio}}</td>
                 <td>
-                    <a href="" class="btn btn-warning"><b>Actualizar</b></a>
-                    <a href="" class="btn btn-danger"><b>Eliminar</b></a>
+                    <a href="/Actualizar/{{$res->id}}" class="btn btn-warning"><b>Actualizar</b></a>
+                    <a href="/Borrar/{{$res->id}}" class="btn btn-danger"><b>Eliminar</b></a>
                 </td>
             </tr>
+        @endforeach
         </tbody>
     </table>
 </div>
