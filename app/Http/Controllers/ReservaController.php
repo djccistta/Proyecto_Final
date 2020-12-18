@@ -27,6 +27,22 @@ class ReservaController extends Controller
         return $this->lista();
 
     }
+    public function savereserva(Request $req){
+        $save = new reserva();
+        $save->nombrepersona=$req->nomcliente;
+        $save->apellidopersona=$req->apecliente;
+        $save->correo=$req->correo;
+        $save->telefono=$req->ncelular;
+        $save->fecha=$req->ftour;
+        $save->nroadultos=$req->nadultos;
+        $save->nroniños=$req->nniños;
+
+        $save->save();
+
+        /* return view("inicio"); */
+        return back();
+
+    }
     public function lista(){
         return view('reservas.index', [
             'reserva' => reserva::paginate()

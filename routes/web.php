@@ -51,6 +51,8 @@ Route::get('/reservas.nuevo', [App\Http\Controllers\ReservaController::class, 'n
 //guarda en la base de datos
 Route::post('/reserva.nuevo',[App\Http\Controllers\ReservaController::class, 'savereserve'])
 ->name('savereserve');
+Route::post('/reservar',[App\Http\Controllers\ReservaController::class, 'savereserva'])
+->name('reserva.save');
 //lista las reservas
 Route::get('/reservas', [App\Http\Controllers\ReservaController::class, 'lista'])
 ->name('reserva.lista');

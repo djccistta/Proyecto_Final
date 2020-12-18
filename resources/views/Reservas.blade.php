@@ -59,34 +59,35 @@
 
                 <div class="col-md-6">
                     <h3><b>Reserve Aquí:</b></h3>
-                    <form action="">
+                    <form action="{{route('reserva.save')}}" method="POST">
+                        @csrf
                         <div class="form-group">
                             <label for="Nombre"> Nombres:</label>
-                            <input type="text" name="" class="form-control"  id="Nombre" placeholder="Ingrese Nombres" Required>
+                            <input type="text" name="nomcliente" class="form-control"  id="Nombre" placeholder="Ingrese Nombres" Required>
                         </div>
                         <div class="form-group">
                             <label for="Apellido"> Apellidos:</label>
-                            <input type="text" name="" class="form-control"  id="Apellido" placeholder="Ingrese Apellidos" Required>
+                            <input type="text" name="apecliente" class="form-control"  id="Apellido" placeholder="Ingrese Apellidos" Required>
                         </div>
                         <div class="form-group">
                             <label for="mail"> Correo:</label>
-                            <input type="mail" class="form-control"name="" class="form-control"  id="mail" placeholder="ejemplo@ejemplo.com" Required>
+                            <input type="mail" class="form-control"name="correo" class="form-control"  id="mail" placeholder="ejemplo@ejemplo.com" Required>
                         </div>
                         <div class="form-group">
                             <label for="cel"> N° Celular:</label>
-                            <input type="text" name="" class="form-control"  id="cel" placeholder="Ingrese Número de Celular" Required>
+                            <input type="text" name="ncelular" class="form-control"  id="cel" placeholder="Ingrese Número de Celular" Required>
                         </div>
                         <div class="form-group">
                             <label for="fecha"> Fecha de Tour:</label>
-                            <input type="date" name="" class="form-control"  id="Fecha" placeholder="--/--/----" Required>
+                            <input type="date" name="ftour" class="form-control"  id="Fecha" placeholder="--/--/----" Required>
                         </div>
                         <div class="form-group">
                             <label for="adultos"> N° Adultos:</label>
-                            <input type="number" name="" class="form-control"  id="adultos" placeholder="Ingrese Número de Adultos" Required>
+                            <input type="number" name="nadultos" class="form-control"  id="adultos" placeholder="Ingrese Número de Adultos" Required>
                         </div>
                         <div class="form-group">
                             <label for="niños"> N° Niños:</label>
-                            <input type="number" name="" class="form-control"  id="niños" placeholder="Ingrese Número de Niños" Required>
+                            <input type="number" name="nniños" class="form-control"  id="niños" placeholder="Ingrese Número de Niños" Required>
                         </div>
 
                         <div class="form-group">
