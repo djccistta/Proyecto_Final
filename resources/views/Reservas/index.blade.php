@@ -43,7 +43,7 @@
                 <td>{{ $res->nroadultos }}</td>
                 <td>{{ $res->nroniños }}</td>
                 <td>
-                    <a href="{{route('update')}}" class="btn btn-danger"><b>Actualizar</b></a>
+                    <a href="{{route('reserva.update',$res)}}" class="btn btn-danger"><b>Actualizar</b></a>
                     <a href="{{route('reserve.delete', $res)}}" class="btn btn-warning"><b>Eliminar</b></a>
                 </td>
             </tr>

@@ -38,9 +38,25 @@ class ReservaController extends Controller
         return $this->lista();
 
     }
-    public function update(){
-        return "nada aun";
+    public function updatesave(Request $req){
 
+        $update= reserva::find($req->id);
+        
+        $update->nombrepersona=$req->nomcliente;
+        $update->apellidopersona=$req->apecliente;
+        $update->correo=$req->correo;
+        $update->telefono=$req->ncelular;
+        $update->fecha=$req->ftour;
+        $update->nroadultos=$req->nadultos;
+        $update->nroniños=$req->nniños;
+        $update->save();
+
+        return $this->lista();
+
+    }
+    public function update($id){
+        $res = $Paquete= reserva::find($id);
+        return view('reservas.actualizar',compact('res'));
     }
 
 }

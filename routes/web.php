@@ -58,6 +58,8 @@ Route::get('/reservas', [App\Http\Controllers\ReservaController::class, 'lista']
 Route::get('/elimina/{res}',[App\Http\Controllers\ReservaController::class, 'delete'])
 ->name("reserve.delete");
 //actualizacion de reservas
-Route::get('/actualizar',[App\Http\Controllers\ReservaController::class, 'update'])
-->name("update");
+Route::get('/actualizar/{id}',[App\Http\Controllers\ReservaController::class, 'update'])
+->name("reserva.update");
+Route::POST('/actualizar',[App\Http\Controllers\ReservaController::class, 'updatesave'])
+->name("update.save");
 
