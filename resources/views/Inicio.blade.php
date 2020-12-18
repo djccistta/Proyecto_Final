@@ -34,9 +34,9 @@
                             <a class="nav-link" href="/nosotros">Nosotros</a>
                         </li>
                         @if (Route::has('login'))
-                            @auth
+                            @auth 
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('/home') }}">Principal</a>
+                                <a class="nav-link" href="{{ url('/home') }}"> | {{ Auth::user()->name }}</a>
                             </li>
                             @else
                             <li class="nav-item">
