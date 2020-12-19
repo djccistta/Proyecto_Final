@@ -17,7 +17,7 @@
         <thead>
             <tr>
                 <th scope="col">N°</th>
-                <!-- <th scope="col">Paquete</th> -->
+                <th scope="col">Paquete</th>
                 <th scope="col">Nombre</th>
                 <th scope="col">Apellido</th>
                 <th scope="col">Fecha</th>
@@ -35,6 +35,7 @@
             <tr>
                 <td> <?php  echo $cuenta;
                         $cuenta++; ?> </td>
+                <td><a href='#' >{{ $res->paquete_id }}</a></td>
                 <td>{{ $res->nombrepersona }}</td>
                 <td>{{ $res->apellidopersona }}</td>
                 <td>{{ $res->fecha }}</td>

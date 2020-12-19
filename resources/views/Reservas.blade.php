@@ -20,7 +20,7 @@
                             <a class="nav-link" href="/">Inicio</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link " href="/paquete">Paquetes</a>
+                            <a class="nav-link " href="{{route('Paquete.listaInicio')}}">Paquetes</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/contactanos">Contactanos</a>
@@ -50,9 +50,9 @@
                     <div class="card mt-3" style="width: 18rem;">
                         <img class="card-img-top" src="..." alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">Nombre del Paquete</h5>
-                            <p class="card-text">Detalles:</p>
-                            <p class="card-text">Precio:</p>
+                            <h5 class="card-title">Nombre del Paquete: {{$paquete->nombre}}</h5>
+                            <p class="card-text">Detalles: {{$paquete->descripcion}}</p>
+                            <p class="card-text">Precio: {{$paquete->precio}}</p>
                         </div>
                     </div>
                 </div>
@@ -61,6 +61,17 @@
                     <h3><b>Reserve Aquí:</b></h3>
                     <form action="{{route('reserva.save')}}" method="POST">
                         @csrf
+                        <!-- aqui value="" -->
+                        
+
+                        <div class="form-group">
+                            <input type="hidden" name="id" value="{{$paquete->id}}"  class="form-control"  Required disabled="true">
+                        </div>
+                        <div class="form-group">
+                            <input type="hidden" name="nomtour" value="{{$paquete->nombre}}" class="form-control"  id="Tour" placeholder="Nombre del Tour" Required disabled="true">
+                        </div>
+                        <!-- hasta aqui -->
+
                         <div class="form-group">
                             <label for="Nombre"> Nombres:</label>
                             <input type="text" name="nomcliente" class="form-control"  id="Nombre" placeholder="Ingrese Nombres" Required>
@@ -107,8 +118,8 @@
                     </div>
                     <div class="col-md-3">
                         <a class="nav-link text-dark" href="/">Inicio</a>
-                        <a class="nav-link text-dark" href="/paquete">Paquetes</a>
-                        <a class="nav-link " href="{{ route('nuevo') }}">Reservas</a>
+                        <a class="nav-link text-dark" href="{{route('Paquete.listaInicio')}}">Paquetes</a>
+                        <!-- <a class="nav-link " href="{{ route('nuevo') }}">Reservas</a> -->
                         <a class="nav-link text-dark" href="/contactanos">Contactanos</a>
                         <a class="nav-link text-dark" href="/nosotros">Nosotros</a>
                    </div>

@@ -34,6 +34,11 @@ class PaqueteController extends Controller
         $Paquete= paquete::orderBy('nombre','ASC')->get();
         return view('Paquetes.index',compact('Paquete'));
     }
+    public function ListaPaqueteInicio()
+    {
+        $Paquete= paquete::all();
+        return view('Paquete',compact('Paquete'));
+    }
     public function BorrarPaquete($id)
     {
        paquete::where('id',$id)->delete();

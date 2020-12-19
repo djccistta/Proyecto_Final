@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\paquete;
 use App\Models\reserva;
 use Illuminate\Http\Request;
 use PhpParser\Node\Stmt\Return_;
@@ -10,10 +11,14 @@ class ReservaController extends Controller
 {
     
     public function nuevo(){
-        return view('reservas.nuevo');
+        return view('reservas.nuevo', [
+            'paquete' => paquete::paginate()
+        ]);
     } 
+    //guarda la reserva desde la vista de admin
     public function savereserve(Request $req){
         $save = new reserva();
+        $save->paquete_id=$req->paquete_id;
         $save->nombrepersona=$req->nomcliente;
         $save->apellidopersona=$req->apecliente;
         $save->correo=$req->correo;
@@ -27,6 +32,7 @@ class ReservaController extends Controller
         return $this->lista();
 
     }
+    //guarda la reserva desde el incio (el usuario)
     public function savereserva(Request $req){
         $save = new reserva();
         $save->nombrepersona=$req->nomcliente;
@@ -43,6 +49,7 @@ class ReservaController extends Controller
         return back();
 
     }
+    //muestra todas las reservas al admin
     public function lista(){
         return view('reservas.index', [
             'reserva' => reserva::paginate()
@@ -58,6 +65,7 @@ class ReservaController extends Controller
 
         $update= reserva::find($req->id);
         
+        $update->paquete_id=$req->paquete_id;
         $update->nombrepersona=$req->nomcliente;
         $update->apellidopersona=$req->apecliente;
         $update->correo=$req->correo;
@@ -71,8 +79,16 @@ class ReservaController extends Controller
 
     }
     public function update($id){
-        $res = $Paquete= reserva::find($id);
-        return view('reservas.actualizar',compact('res'));
+        $res = reserva::find($id);
+        return view('reservas.actualizar',compact('res'),[
+            'paquete' => paquete::paginate()
+        ]);
+    }
+     //envia la informacion del paquete seleccionado por el usuario
+    public function reservapaquete($id){
+        $paquete = paquete::find($id);
+        return view('Reservas',compact('paquete'));
+
     }
 
 }

@@ -24,7 +24,7 @@
                             <a class="nav-link" href="/">Inicio</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link " href="/paquete">Paquetes</a>
+                            <a class="nav-link " href="{{route('Paquete.listaInicio')}}">Paquetes</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/contactanos">Contactanos</a>
@@ -54,15 +54,17 @@
 
                 <h2 class="text-danger"> <b>Paquetes Locales:</b> </h2>
 
+                @foreach($Paquete as $paquete)
                 <div class="card mt-3" style="width: 18rem;">
                     <img class="card-img-top" src="..." alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Nombre del Paquete</h5>
-                        <p class="card-text">Detalles:</p>
-                        <p class="card-text">Precio:</p>
-                        <a href="/reservar" class="btn btn-primary">Reservar</a>
+                    <div class="card-body">{{ $paquete->id }}
+                        <h5 class="card-title">Nombre: {{ $paquete->nombre }}</h5>
+                        <p class="card-text"> Detalles: {{ $paquete->descripcion }}</p>
+                        <p class="card-text">Precio: {{ $paquete->precio }}</p>
+                        <a href="{{ route('reserva-tour',$paquete->id) }}" class="btn btn-primary">Reservar</a>
                     </div>
                 </div>
+                @endforeach
 
             </div>
 
@@ -73,9 +75,9 @@
                 <div class="card mt-3" style="width: 18rem;">
                     <img class="card-img-top" src="..." alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Nombre del Paquete</h5>
-                        <p class="card-text">Detalles:</p>
-                        <p class="card-text">Precio:</p>
+                        <h5 class="card-title">Nombre del Paquete {{$paquete->nombre}}</h5>
+                        <p class="card-text">Detalles: {{$paquete->descripcion}}</p>
+                        <p class="card-text">Precio: {{$paquete->precio}}</p>
                         <a href="/reservar" class="btn btn-primary">Reservar</a>
                     </div>
                 </div>
@@ -91,7 +93,7 @@
                     </div>
                     <div class="col-md-3">
                         <a class="nav-link text-dark" href="/">Inicio</a>
-                        <a class="nav-link text-dark" href="/paquete">Paquetes</a>
+                        <a class="nav-link text-dark" href="{{route('Paquete.listaInicio')}}">Paquetes</a>
                         <a class="nav-link text-dark" href="/contactanos">Contactanos</a>
                         <a class="nav-link text-dark" href="/nosotros">Nosotros</a>
                    </div>

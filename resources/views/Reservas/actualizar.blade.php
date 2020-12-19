@@ -14,7 +14,11 @@
 
             <div class="form-group">
                 <label for="Nombre"> Nombre del Tour:</label>
-                <input type="text" name="nomtour" value="tour" class="form-control" id="Nombre" placeholder="Ingrese Nombre del Tour" Required>
+                <select class="form-control" name="paquete_id" id="paquete_id">
+                    @foreach($paquete as $item)
+                    <option value="{{$item->id}}" class="form-control">{{$item->nombre}}</option>
+                    @endforeach
+                </select>
             </div>
             <div class="form-group">
                 <label for="nombreCliente"> Nombre Cliente:</label>

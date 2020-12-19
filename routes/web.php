@@ -18,9 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('Inicio');
 });
-Route::get('/paquete', function () {
+/* Route::get('/paquetes', function () {
     return view('Paquete');
-});
+});  */
 Route::get('/contactanos', function () {
     return view('Contactanos');
 });
@@ -37,6 +37,8 @@ Route::get('/nuevopaquete', function () {
 Route::post('/Crear','App\Http\Controllers\PaqueteController@CrearPaquete')->name('CrearPaquete');
 Route::get('/Paquetes', [App\Http\Controllers\PaqueteController::class, 'ListaPaquete'])
 ->name('Paquete.lista');
+Route::get('/Nuestros-Paquetes', [App\Http\Controllers\PaqueteController::class, 'ListaPaqueteInicio'])
+->name('Paquete.listaInicio');
 Route::get('/Actualizar/{id}','App\Http\Controllers\PaqueteController@Actualizar1');
 Route::post('/GuardarActualizacion','App\Http\Controllers\PaqueteController@Actualizar2')->name('ActualizarPaquete');
 Route::get('/Borrar/{id}','App\Http\Controllers\PaqueteController@BorrarPaquete');
@@ -44,7 +46,7 @@ Route::get('/Borrar/{id}','App\Http\Controllers\PaqueteController@BorrarPaquete'
 Auth::routes(['reset'=>false]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('Admin');
-
+//admin
 Route::get('/reservas', [App\Http\Controllers\HomeController::class, 'reservas'])->name('Admin');
 //muestra el formulario de reservas
 Route::get('/reservas.nuevo', [App\Http\Controllers\ReservaController::class, 'nuevo'])->name('nuevo');
@@ -64,4 +66,10 @@ Route::get('/actualizar/{id}',[App\Http\Controllers\ReservaController::class, 'u
 ->name("reserva.update");
 Route::POST('/actualizar',[App\Http\Controllers\ReservaController::class, 'updatesave'])
 ->name("update.save");
+//fin admin
+//usuario
+Route::get('/reserva-tour/{id}',[App\Http\Controllers\ReservaController::class, 'reservapaquete'])
+->name("reserva-tour");
+/* Route::POST('/',[App\Http\Controllers\ReservaController::class, 'updatesave'])
+->name("update.save"); */
 
