@@ -48,7 +48,7 @@
             <div class="row  ">
                 <div class="col-md-6">
                     <div class="card mt-3" style="width: 18rem;">
-                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('storage').'/'.$paquete->foto}}" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">Nombre del Paquete: {{$paquete->nombre}}</h5>
                             <p class="card-text">Detalles: {{$paquete->descripcion}}</p>

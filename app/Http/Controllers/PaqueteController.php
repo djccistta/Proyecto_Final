@@ -78,7 +78,7 @@ class PaqueteController extends Controller
             $Paquete['foto']=$req->file('foto')->store('imagenes','public');
         }    
         $Paquete->save();
-        return back()->with('Paquete_Actualizado','El Paquete fue actualizado correctamente'.$req->nombre."".$Paquete->nombre);
+        return back()->with('Paquete_Actualizado','El Paquete fue actualizado correctamente');
     }
  
 }
