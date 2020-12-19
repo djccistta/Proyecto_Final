@@ -30,17 +30,22 @@ Route::get('/nosotros', function () {
 Route::get('/reservar', function () {
     return view('Reservas');
 });
+
+//Abre el formulario para crear un nuevo paquete
 Route::get('/nuevopaquete', function () {
     return view('Paquetes/nuevo');
 });
 
+//Guarda nuevo paquete
 Route::post('/Crear','App\Http\Controllers\PaqueteController@CrearPaquete')->name('CrearPaquete');
-Route::get('/Paquetes', [App\Http\Controllers\PaqueteController::class, 'ListaPaquete'])
-->name('Paquete.lista');
-Route::get('/Nuestros-Paquetes', [App\Http\Controllers\PaqueteController::class, 'ListaPaqueteInicio'])
-->name('Paquete.listaInicio');
+//Lista Los Paquetes
+Route::get('/Paquetes', [App\Http\Controllers\PaqueteController::class, 'ListaPaquete'])->name('Paquete.lista');
+Route::get('/Nuestros-Paquetes', [App\Http\Controllers\PaqueteController::class, 'ListaPaqueteInicio'])->name('Paquete.listaInicio');
+//Obtiene los datos de un registro por id para cargarlos en el formulario y ser actualizados
 Route::get('/Actualizar/{id}','App\Http\Controllers\PaqueteController@Actualizar1');
+//Guarda los datos actualizados
 Route::post('/GuardarActualizacion','App\Http\Controllers\PaqueteController@Actualizar2')->name('ActualizarPaquete');
+//Elimina un registro por id
 Route::get('/Borrar/{id}','App\Http\Controllers\PaqueteController@BorrarPaquete');
 
 Auth::routes(['reset'=>false]);
