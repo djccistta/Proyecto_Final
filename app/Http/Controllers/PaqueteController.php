@@ -27,7 +27,10 @@ class PaqueteController extends Controller
             $Paquete['foto']=$req->file('foto')->store('imagenes','public');
         }
         $Paquete->save();
-        return back()->with('Crear_Paquete','El paquete se creo correctamente');
+        //$Paquete= paquete::orderBy('nombre','ASC')->get();
+        return $this->ListaPaquete()->with('Crear_Paquete','El paquete se creo correctamente');
+        //view('Paquetes.index',compact('Paquete'))>with('Crear_Paquete','El paquete se creo correctamente');
+        //return back()->with('Crear_Paquete','El paquete se creo correctamente');
     }
     public function ListaPaquete()
     {
@@ -78,6 +81,7 @@ class PaqueteController extends Controller
             $Paquete['foto']=$req->file('foto')->store('imagenes','public');
         }    
         $Paquete->save();
+        
         return back()->with('Paquete_Actualizado','El Paquete fue actualizado correctamente');
     }
  

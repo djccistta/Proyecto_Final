@@ -23,8 +23,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $Paquete= paquete::orderBy('nombre','ASC')->get();
-        return view('Paquetes.index',compact('Paquete'));
+        return view('Paquetes.index', [
+            'Paquete' => paquete::paginate()
+        ]);
     
     }
 

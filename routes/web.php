@@ -31,23 +31,9 @@ Route::get('/reservar', function () {
     return view('Reservas');
 });
 
-//Abre el formulario para crear un nuevo paquete
-
-Route::get('/nuevopaquete','App\Http\Controllers\PaqueteController@nuevo')->middleware('auth');
-//Guarda nuevo paquete
-Route::post('/Crear','App\Http\Controllers\PaqueteController@CrearPaquete')->name('CrearPaquete')->middleware('auth');
-//Lista Los Paquetes
-Route::get('/Paquetes', [App\Http\Controllers\PaqueteController::class, 'ListaPaquete'])->name('Paquete.lista')->middleware('auth');;
-Route::get('/Nuestros-Paquetes', [App\Http\Controllers\PaqueteController::class, 'ListaPaqueteInicio'])->name('Paquete.listaInicio');
-//Obtiene los datos de un registro por id para cargarlos en el formulario y ser actualizados
-Route::get('/Actualizar/{id}','App\Http\Controllers\PaqueteController@Actualizar1')->middleware('auth');
-//Guarda los datos actualizados
-Route::post('/GuardarActualizacion','App\Http\Controllers\PaqueteController@Actualizar2')->name('ActualizarPaquete')->middleware('auth');
-//Elimina un registro por id
-Route::get('/Borrar/{id}','App\Http\Controllers\PaqueteController@BorrarPaquete')->middleware('auth');
 
 Auth::routes(['reset'=>false]);
-
+//index con lista de paquetes
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('Admin');
 //admin
 Route::get('/reservas', [App\Http\Controllers\HomeController::class, 'reservas'])->name('Admin');
@@ -76,3 +62,19 @@ Route::get('/reserva-tour/{id}',[App\Http\Controllers\ReservaController::class, 
 /* Route::POST('/',[App\Http\Controllers\ReservaController::class, 'updatesave'])
 ->name("update.save"); */
 
+
+//RUTAS PARA EL CRUD DE PAQUETES
+//Abre el formulario para crear un nuevo paquete
+
+Route::get('/nuevopaquete','App\Http\Controllers\PaqueteController@nuevo')->middleware('auth');
+//Guarda nuevo paquete
+Route::post('/home','App\Http\Controllers\PaqueteController@CrearPaquete')->name('CrearPaquete')->middleware('auth');
+//Lista Los Paquetes
+
+Route::get('/Nuestros-Paquetes', [App\Http\Controllers\PaqueteController::class, 'ListaPaqueteInicio'])->name('Paquete.listaInicio');
+//Obtiene los datos de un registro por id para cargarlos en el formulario y ser actualizados
+Route::get('/Actualizar/{id}','App\Http\Controllers\PaqueteController@Actualizar1')->middleware('auth');
+//Guarda los datos actualizados
+Route::post('/Actualizar','App\Http\Controllers\PaqueteController@Actualizar2')->name('ActualizarPaquete')->middleware('auth');
+//Elimina un registro por id
+Route::get('/Borrar/{id}','App\Http\Controllers\PaqueteController@BorrarPaquete')->middleware('auth');
