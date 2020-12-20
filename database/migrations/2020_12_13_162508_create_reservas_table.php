@@ -15,6 +15,7 @@ class CreateReservasTable extends Migration
     {
         Schema::create('reservas', function (Blueprint $table) {
             $table->id();
+            $table->foreignId("paquete_id")->references("id")->on("paquetes");
             $table->string('nombrepersona');
             $table->string('apellidopersona');
             $table->string('telefono');

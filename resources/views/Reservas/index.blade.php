@@ -17,7 +17,7 @@
         <thead>
             <tr>
                 <th scope="col">N°</th>
-                <!-- <th scope="col">Paquete</th> -->
+                <th scope="col">Paquete</th>
                 <th scope="col">Nombre</th>
                 <th scope="col">Apellido</th>
                 <th scope="col">Fecha</th>
@@ -35,6 +35,7 @@
             <tr>
                 <td> <?php  echo $cuenta;
                         $cuenta++; ?> </td>
+                <td><a href='#' >{{ $res->paquete_id }}</a></td>
                 <td>{{ $res->nombrepersona }}</td>
                 <td>{{ $res->apellidopersona }}</td>
                 <td>{{ $res->fecha }}</td>
@@ -43,7 +44,7 @@
                 <td>{{ $res->nroadultos }}</td>
                 <td>{{ $res->nroniños }}</td>
                 <td>
-                    <a href="{{route('update')}}" class="btn btn-danger"><b>Actualizar</b></a>
+                    <a href="{{route('reserva.update',$res)}}" class="btn btn-danger"><b>Actualizar</b></a>
                     <a href="{{route('reserve.delete', $res)}}" class="btn btn-warning"><b>Eliminar</b></a>
                 </td>
             </tr>

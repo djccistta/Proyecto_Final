@@ -23,7 +23,7 @@
                             <a class="nav-link" href="/">Inicio</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link " href="/paquete">Paquetes</a>
+                            <a class="nav-link " href="{{route('Paquete.listaInicio')}}">Paquetes</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/nosotros">Nosotros</a>
@@ -96,7 +96,7 @@
                     </div>
                     <div class="col-md-3">
                         <a class="nav-link text-dark" href="/">Inicio</a>
-                        <a class="nav-link text-dark" href="/paquete">Paquetes</a>
+                        <a class="nav-link text-dark" href="{{route('Paquete.listaInicio')}}">Paquetes</a>
                         <a class="nav-link text-dark" href="/contactanos">Contactanos</a>
                         <a class="nav-link text-dark" href="/nosotros">Nosotros</a>
                    </div>

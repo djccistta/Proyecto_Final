@@ -34,6 +34,11 @@ class PaqueteController extends Controller
         $Paquete= paquete::orderBy('nombre','ASC')->get();
         return view('Paquetes.index',compact('Paquete'));
     }
+    public function ListaPaqueteInicio()
+    {
+        $Paquete= paquete::all();
+        return view('Paquete',compact('Paquete'));
+    }
     public function BorrarPaquete($id)
     {
        paquete::where('id',$id)->delete();
@@ -73,7 +78,7 @@ class PaqueteController extends Controller
             $Paquete['foto']=$req->file('foto')->store('imagenes','public');
         }    
         $Paquete->save();
-        return back()->with('Paquete_Actualizado','El Paquete fue actualizado correctamente'.$req->nombre."".$Paquete->nombre);
+        return back()->with('Paquete_Actualizado','El Paquete fue actualizado correctamente');
     }
  
 }

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\paquete;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,7 +23,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('Paquetes.index');
+        $Paquete= paquete::orderBy('nombre','ASC')->get();
+        return view('Paquetes.index',compact('Paquete'));
+    
     }
 
     public function reservas()
