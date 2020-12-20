@@ -23,11 +23,12 @@
                             <a class="nav-link " href="{{route('Paquete.listaInicio')}}">Paquetes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/contactanos">Contactanos</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="/nosotros">Nosotros</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contactanos">Contactanos</a>
+                        </li>
+                        
                         @if (Route::has('login'))
                             @auth
                             <li class="nav-item">

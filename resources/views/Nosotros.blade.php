@@ -26,10 +26,10 @@
                             <a class="nav-link " href="{{route('Paquete.listaInicio')}}">Paquetes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/contactanos">Contactanos</a>
+                            <a class="nav-link" href="/nosotros">Nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/nosotros">Nosotros</a>
+                            <a class="nav-link" href="/contactanos">Contactanos</a>
                         </li>
                         @if (Route::has('login'))
                             @auth
@@ -48,11 +48,57 @@
         </nav>
         
         <div class="container mt-5 mb-5">
-          
-        
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>AGENCIA DE VIAJES EN PERU</h1>
+                    <h4>Turismo de Calidad</h4>
+                </div>
+            </div>
+            <div class="row">
+            <div class="col-md-12">
+                <h3>Quienes Somos</h3>
+                <hr/>
+                <p>
+                    Somos una agencia de viajes y operador turístico que brinda servicios de turismo en Perú, con altos estándares de calidad y seguridad para nuestros clientes, satisfaciendo sus expectativas con un staff de profesionales con vasta experiencia en turismo, brindando asesoría para su elección de paquetes con tarifas competitivas, ofertas a la medida de cada cliente usando el desarrollo tecnológico para facilitar distintos canales de pago.
+                    Versátil a la necesidad mas exigente de cada cliente.
+                </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Misión</h4>
+                    <p>
+                        Contribuir con el desarrollo del turismo en nuestro país, de manera sostenible, brindando servicios de calidad con valor agregado cubriendo las expectativas de nuestros clientes como “una experiencia inolvidable”.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h4>Visión</h4>
+                    <p>
+                        Ser reconocida como la mejor empresa de turismo en el Perú, comprometida en el desarrollo e innovación de servicio y calidad para beneficio de nuestros clientes.
+                    </p>
+                </div>
+            </div>    
+            <div class="row">
+                <h4>Valores</h4>
+                <div class="col-md-4">
+                    <p><ion-icon name="arrow-forward-circle-outline"></ion-icon>Integridad.</p>
+                    <p><ion-icon name="arrow-forward-circle-outline"></ion-icon>Honestidad.</p>
+                    <p><ion-icon name="arrow-forward-circle-outline"></ion-icon>Servicio.</p>
+                </div>
+                <div class="col-md-4">
+                    <p><ion-icon name="arrow-forward-circle-outline"></ion-icon>Lealtad.</p>
+                    <p><ion-icon name="arrow-forward-circle-outline"></ion-icon>Seguridad.</p>
+                    <p><ion-icon name="arrow-forward-circle-outline"></ion-icon>Plena Satisfacción del Cliente.</p>
+                </div>
+                <div class="col-md-4">
+                    <p><ion-icon name="arrow-forward-circle-outline"></ion-icon>
+                        Pensando en su seguridad y comodidad contamos con diversas formas de pago con tarjeta de debito o crédito visa, con link con cualquier tarjeta de crédito, transferencias electrónicas, depósitos en cuentas bancarias, transferencias via wester union, transferencias interbancaria y otros.
+                    </p>   
+                </div>
+            </div>       
         </div>
 
-        <footer class="bg-light mt-3">
+        <footer class="bg-light">
             <div class="container">
                 <nav class="row">
                     <div class="col-md-6">
@@ -72,5 +118,8 @@
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <!--Iconos-->
+        <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+
     </body>
 </html>
