@@ -90,9 +90,15 @@
                 <nav class="row">
                     <div class="col-md-6">
                         <h2>Escribenos:</h2>
-                        <a href="https://api.whatsapp.com/send?phone=+51965131044" target="_blank"><ion-icon name="logo-whatsapp"></ion-icon>+51 965 131 044</a>
+                        <li>
+                            <a href="https://api.whatsapp.com/send?phone=+51965131044" target="_blank"><ion-icon name="logo-whatsapp"></ion-icon>+51 965 131 044</a>
+                        </li>
+                        <li>
                         <a href="https://api.whatsapp.com/send?phone=+51934996407" target="_blank"><ion-icon name="logo-whatsapp"></ion-icon>+51 934 996 407</a>
+                        </li>
+                        <li>
                         <a href="https://api.whatsapp.com/send?phone=+51974254763" target="_blank"><ion-icon name="logo-whatsapp"></ion-icon>+51 974 254 763</a>
+                        </li>
                     </div>
                     <div class="col-md-3">
                         <a class="nav-link text-dark" href="/">Inicio</a>
