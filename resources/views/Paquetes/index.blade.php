@@ -14,6 +14,11 @@
                
             </div>
         </form>
+        @if(Session::has('Crear_Paquete'))
+                    <div class="alert alert-succes" role="alert">
+                    {{Session::get('Crear_Paquete')}}
+                    </div>
+            @endif
 
         <caption>Lista de Paquetes</caption>
         <thead>
