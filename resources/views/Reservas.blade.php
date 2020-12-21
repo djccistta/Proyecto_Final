@@ -109,10 +109,6 @@
                             <label for="niños"> N° Niños:</label>
                             <input type="number" name="nniños" class="form-control"  id="niños" placeholder="Ingrese Número de Niños" Required>
                         </div>
-                        <div class="form-group">
-                            <label for="total"> Total:</label>
-                            <input type="text" name="total" class="form-control"  id="total" placeholder="Total..." value="" readonly>
-                        </div>
 
                         <div class="form-group">
                             <button type="submit"  href="#" class="btn btn-success mt-2" onclick="return confirm('¿Desea RESERVAR este TOUR?')">
