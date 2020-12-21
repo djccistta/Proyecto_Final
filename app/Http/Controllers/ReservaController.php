@@ -24,9 +24,17 @@ class ReservaController extends Controller
         $save->correo=$req->correo;
         $save->telefono=$req->ncelular;
         $save->fecha=$req->ftour;
+
         $save->nroadultos=$req->nadultos;
         $save->nroniños=$req->nniños;
 
+        $paquete = paquete::find($req->paquete_id);//se busca el precio del paquete
+        $p = $paquete->precio;//se busca el precio del paquete
+        //se calcula el monto a pagar por adultos y niños (a mitad de precio)
+        $montoAdulto = ($p * $req->nadultos);
+        $montoNiño=(($p * $req->nniños)/2);
+        $totalPago= ($montoAdulto + $montoNiño);//monto total del tour
+        $save->total = $totalPago;
         $save->save();
 
         return $this->lista();
@@ -35,6 +43,7 @@ class ReservaController extends Controller
     //guarda la reserva desde el incio (el usuario)
     public function savereserva(Request $req){
         $save = new reserva();
+        $save->paquete_id=$req->paquete_id;
         $save->nombrepersona=$req->nomcliente;
         $save->apellidopersona=$req->apecliente;
         $save->correo=$req->correo;
@@ -43,13 +52,17 @@ class ReservaController extends Controller
         $save->nroadultos=$req->nadultos;
         $save->nroniños=$req->nniños;
 
+        $paquete = paquete::find($req->paquete_id);//se busca el precio del paquete
+        $p = $paquete->precio;//se busca el precio del paquete
+        //se calcula el monto a pagar por adultos y niños (a mitad de precio)
+        $montoAdulto = ($p * $req->nadultos);
+        $montoNiño=(($p * $req->nniños)/2);
+        $totalPago= ($montoAdulto + $montoNiño);//monto total del tour
+        $save->total = $totalPago;
         $save->save();
-
-        /* return view("inicio"); */
         return back();
-
     }
-    //muestra todas las reservas al admin
+    //muestra todas las reservas al administrador
     public function lista(){
         return view('reservas.index', [
             'reserva' => reserva::paginate()
@@ -73,10 +86,16 @@ class ReservaController extends Controller
         $update->fecha=$req->ftour;
         $update->nroadultos=$req->nadultos;
         $update->nroniños=$req->nniños;
+        
+        $paquete = paquete::find($req->paquete_id);//se busca el precio del paquete
+        $p = $paquete->precio;//se busca el precio del paquete
+        //se calcula el monto a pagar por adultos y niños (a mitad de precio)
+        $montoAdulto = ($p * $req->nadultos);
+        $montoNiño=(($p * $req->nniños)/2);
+        $totalPago= ($montoAdulto + $montoNiño);
+        $update->total = $totalPago;//monto total del tour
         $update->save();
-
         return $this->lista();
-
     }
     public function update($id){
         $res = reserva::find($id);

@@ -67,16 +67,16 @@
 
                 <div class="col-md-6">
                     <h3><b>Reserve Aquí:</b></h3>
-                    <form action="{{route('reserva.save')}}" method="POST">
+                    <form action="{{route('reserva.save')}}" method="get">
                         @csrf
                         <!-- aqui value="" -->
                         
 
                         <div class="form-group">
-                            <input type="hidden" name="id" value="{{$paquete->id}}"  class="form-control"  Required disabled="true">
+                            <input type="hidden" name="paquete_id" id="paquete_id" value="{{$paquete->id}}"  class="form-control"  Required >
                         </div>
                         <div class="form-group">
-                            <input type="hidden" name="nomtour" value="{{$paquete->nombre}}" class="form-control"  id="Tour" placeholder="Nombre del Tour" Required disabled="true">
+                            <input type="hidden" name="nomtour" value="{{$paquete->nombre}} " class="form-control"  id="Tour" placeholder="Nombre del Tour" Required >
                         </div>
                         <!-- hasta aqui -->
 

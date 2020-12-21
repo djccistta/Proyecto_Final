@@ -42,8 +42,9 @@ Route::get('/reservas.nuevo', [App\Http\Controllers\ReservaController::class, 'n
 //guarda en la base de datos
 Route::post('/reserva.nuevo',[App\Http\Controllers\ReservaController::class, 'savereserve'])
 ->name('savereserve')->middleware('auth');;
-Route::post('/reservar',[App\Http\Controllers\ReservaController::class, 'savereserva'])
-->name('reserva.save')->middleware('auth');;
+
+
+
 //lista las reservas
 Route::get('/reservas', [App\Http\Controllers\ReservaController::class, 'lista'])
 ->name('reserva.lista')->middleware('auth');;
@@ -59,6 +60,8 @@ Route::POST('/actualizar',[App\Http\Controllers\ReservaController::class, 'updat
 //usuario
 Route::get('/reserva-tour/{id}',[App\Http\Controllers\ReservaController::class, 'reservapaquete'])
 ->name("reserva-tour");
+Route::get('/reservar',[App\Http\Controllers\ReservaController::class, 'savereserva'])
+->name('reserva.save');
 /* Route::POST('/',[App\Http\Controllers\ReservaController::class, 'updatesave'])
 ->name("update.save"); */
 

@@ -25,7 +25,7 @@
                 <th scope="col">E-mail</th>
                 <th scope="col">N° Adultos</th>
                 <th scope="col">N° Niños</th>
-                <!-- <th scope="col">Total</th> -->
+                <th scope="col">Total</th>
                 <th scope="col">Acción</th>
             </tr>
         </thead>
@@ -43,6 +43,7 @@
                 <td>{{ $res->correo }}</td>
                 <td>{{ $res->nroadultos }}</td>
                 <td>{{ $res->nroniños }}</td>
+                <td>{{ $res->total }}</td>
                 <td>
                     <a href="{{route('reserva.update',$res)}}" class="btn btn-danger"><b>Actualizar</b></a>
                     <a href="{{route('reserve.delete', $res)}}" class="btn btn-warning"><b>Eliminar</b></a>

@@ -12,9 +12,11 @@
                 <label for="Nombre"> Nombre del Tour:</label>
                 <select class="form-control" name="paquete_id" id="">
                     @foreach($paquete as $item)
-                    <option value="{{$item->id}}" class="form-control">{{$item->nombre}}</option>
+                    <option value="{{$item->id}} " class="form-control">{{$item->nombre}} - {{$item->precio}}</option>
                     @endforeach
                 </select>
+
+
             </div>
 
             <div class="form-group">

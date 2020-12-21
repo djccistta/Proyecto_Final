@@ -23,6 +23,7 @@ class CreateReservasTable extends Migration
             $table->string('nroadultos');
             $table->integer('nroniños');
             $table->date('fecha');
+            $table->integer('total');
             $table->timestamps();
         });
     }
