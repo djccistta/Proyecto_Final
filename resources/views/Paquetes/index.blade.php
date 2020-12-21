@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="table-responsive m-5">
+<div class="table-responsive">
     <table class="table">
         <h2 class="text-danger justify-heading"> <b>Paquetes:</b> </h2>
 
