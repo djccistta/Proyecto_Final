@@ -55,12 +55,6 @@
                                 </li>
                             @endif
                             
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark letra-nav" href="{{ route('register') }}"><b>{{ __('Registrarse') }}</b></a>
-                                </li>
-                            @endif
-                            
                         @else
                             <li class="nav-item dropdown">
                                 <a class="nav-link  text-dark letra-nav" href="#" role="button"  aria-haspopup="true" aria-expanded="false" v-pre>
@@ -74,6 +68,7 @@
                             <li class="nav-item">
                                 <a class="nav-link text-dark letra-nav" href="/reservas"><b>Reservas</b></a>
                             </li>
+
 
                             <li class="nav-item dropdown">
                                 <a class="dropdown-item text-dark letra-nav" href="{{ route('logout') }}"

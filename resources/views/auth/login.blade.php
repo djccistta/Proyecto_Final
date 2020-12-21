@@ -19,7 +19,7 @@
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <strong>Estos credenciales son incorrectos.</strong>
                                     </span>
                                 @enderror
                             </div>
