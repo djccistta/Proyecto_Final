@@ -58,7 +58,7 @@
                 </div>
                 <div class="col-sm-6">
                     <a href="../reservas">
-                        <button type="submit" class="btn btn-danger mt-2" onclick="return confirm('¿Canelar la Actualizacion?')">
+                        <button type="submit" class="btn btn-danger mt-2" onclick="return confirm('¿Cancelar la Actualizacion?')">
                             Cancelar
                         </button>
                     </a>

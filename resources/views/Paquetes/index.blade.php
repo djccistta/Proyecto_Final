@@ -42,8 +42,8 @@
                 <td>{{$res->descripcion}}</td>
                 <td>{{$res->precio}}</td>
                 <td>
-                    <a href="/Actualizar/{{$res->id}}" class="btn btn-warning"><b>Actualizar</b></a>
-                    <a href="/Borrar/{{$res->id}}" class="btn btn-danger"><b>Eliminar</b></a>
+                    <a href="/Actualizar/{{$res->id}}" class="btn btn-warning" ><b>Actualizar</b></a>
+                    <a href="/Borrar/{{$res->id}}" class="btn btn-danger" onclick="return confirm('¿Desea ELIMINAR este PAQUETE?')"><b>Eliminar</b></a>
                 </td>
             </tr>
         @endforeach
