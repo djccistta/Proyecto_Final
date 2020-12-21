@@ -84,6 +84,7 @@ class PaqueteController extends Controller
         
         return back()->with('Paquete_Actualizado','El Paquete fue actualizado correctamente');
     }
+    
  
 }
 
