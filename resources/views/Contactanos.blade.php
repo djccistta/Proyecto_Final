@@ -63,21 +63,19 @@
                         </ol>
                         <div class="carousel-inner">
                             <div class="carousel-item active" style="height:100vh" >
-                                <img class="d-block w-100" src="https://i.ytimg.com/vi/n5dooQMzFi0/maxresdefault.jpg" alt="First slide">
+                                <img class="d-block w-100" src="https://alsitransportes.com/uploads/7/6/9/7/76976505/published/contactanos-2000x789.png?1523377117" alt="First slide">
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h1 >CONTACTANOS</h1>
                                 </div>
                             </div>
                             <div class="carousel-item" style="height:100vh">
-                                <img class="d-block w-100" src="https://i.ytimg.com/vi/MmpX5eLf9eQ/maxresdefault.jpg" alt="Second slide">
+                                <img class="d-block w-100" src="https://clasicafmradio.es/wp-content/uploads/2018/03/Travel-site.jpg" alt="Second slide">
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h1 >CONTACTANOS</h1>
+                                    <h1 class="text-dark">CONTACTANOS</h1>
                                 </div>
                             </div>
                             <div class="carousel-item" style="height:100vh">
-                                <img class="d-block w-100" src="https://viajes.nationalgeographic.com.es/medio/2018/12/18/amazonia-peruana_6b936ba1_1600x1067.jpg" alt="Third slide">
+                                <img class="d-block w-100" src="https://mdcmagazine.com/uploads/events/wttc-promueve-safe-travels.jpg" alt="Third slide">
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h1 >CONTACTANOS</h1>
                                 </div>
                             </div>
                         </div>

@@ -11,14 +11,7 @@
         <link rel="stylesheet" href="css/estilos.css">
     </head>
     <body >
-    <nav class="navbar navbar-light bg-light">
-  <div class="container-fluid">
-    <form class="d-flex">
-      <input class="form-control me-2" name="name" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
+
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
                 <a class="navbar-brand" href="#"> 
@@ -30,6 +23,7 @@
 
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto ">
+                        
                         <li class="nav-item">
                             <a class="nav-link text-dark letra-nav" href="/"> <b>Inicio</b> </a>
                         </li>
@@ -62,7 +56,18 @@
            
         <div class="container mt-5 mb-5">
 
+            <div>
+                <div class="container-fluid">
+                    <form class="d-flex">
+                    <input class="form-control me-2" name="name" type="search" placeholder="Buscar..." aria-label="Search" style="width:500px; transform:translateX(400px)">
+                    <button class="btn btn-outline-success" type="submit" style="width:75px; transform:translateX(400px)">Buscar</button>
+                    </form>
+                </div>
+                </center>
+            </div>
+
             <div class="row">
+
 
                 <h2 class="text-danger"> <b>Paquetes Locales:</b> </h2>
 
