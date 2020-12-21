@@ -59,15 +59,17 @@
                 <h2 class="text-danger"> <b>Paquetes Locales:</b> </h2>
 
                 @foreach($Paquete as $paquete)
+                @if($paquete->categoria=="Local")
                 <div class="card mt-3" style="width: 18rem;">
                     <img class="card-img-top" src="{{ asset('storage').'/'.$paquete->foto}}" alt="Card image cap">
-                    <div class="card-body">{{ $paquete->id }}
+                    <div class="card-body">
                         <h5 class="card-title">Nombre: {{ $paquete->nombre }}</h5>
                         <p class="card-text"> Detalles: {{ $paquete->descripcion }}</p>
-                        <p class="card-text">Precio: {{ $paquete->precio }}</p>
+                        <p class="card-text">Precio: S/. {{ $paquete->precio }}</p>
                         <a href="{{ route('reserva-tour',$paquete->id) }}" class="btn btn-primary">Reservar</a>
                     </div>
                 </div>
+                @endif
                 @endforeach
 
             </div>
@@ -75,16 +77,19 @@
             <div class="row mt-5">
 
                 <h2 class="text-danger"> <b>Paquetes Nacionales:</b> </h2>
-
+                @foreach($Paquete as $paquete)
+                @if($paquete->categoria=="Nacional")
                 <div class="card mt-3" style="width: 18rem;">
                     <img class="card-img-top" src="..." alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Nombre del Paquete {{$paquete->nombre}}</h5>
+                        <h5 class="card-title">Nombre: {{$paquete->nombre}}</h5>
                         <p class="card-text">Detalles: {{$paquete->descripcion}}</p>
-                        <p class="card-text">Precio: {{$paquete->precio}}</p>
+                        <p class="card-text">Precio: S/.{{$paquete->precio}}</p>
                         <a href="/reservar" class="btn btn-primary">Reservar</a>
                     </div>
                 </div>
+                @endif
+                @endforeach
 
             </div>
 

@@ -55,7 +55,7 @@
 
         <div class="container mb-5 mt-5">
 
-            <div class="row mt-5">
+            <div class="row mt-5" >
                 <div class="col-md-3"></div>
                 <div class="col-md-6">
                     <form action="">
