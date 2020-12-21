@@ -43,7 +43,7 @@
 
 
             <div class="form-group">
-                <button type="submit" class="btn btn-warning mt-2">
+                <button type="submit" class="btn btn-warning mt-2" onclick="return confirm('¿Desea ACTUALIZAR este TOUR?')">
                     Editar
                 </button>
             </div>

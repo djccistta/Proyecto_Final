@@ -35,7 +35,7 @@ Route::get('/reservar', function () {
 Auth::routes(['reset'=>false]);
 //index con lista de paquetes
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');;
-            /* //CRUD de reservas para el administrador */
+            /* //reservas para el administrador */
 Route::get('/reservas', [App\Http\Controllers\HomeController::class, 'reservas'])->middleware('auth');;
 //muestra el formulario de reservas
 Route::get('/reservas.nuevo', [App\Http\Controllers\ReservaController::class, 'nuevo'])->name('nuevo')->middleware('auth');;

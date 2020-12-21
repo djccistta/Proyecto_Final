@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="table-responsive m-5">
+<div class="table-responsive">
     <table class="table">
         <h2 class="text-danger justify-heading"> <b>Paquetes:</b> </h2>
 
@@ -42,8 +42,8 @@
                 <td>{{$res->descripcion}}</td>
                 <td>{{$res->precio}}</td>
                 <td>
-                    <a href="/Actualizar/{{$res->id}}" class="btn btn-warning"><b>Actualizar</b></a>
-                    <a href="/Borrar/{{$res->id}}" class="btn btn-danger"><b>Eliminar</b></a>
+                    <a href="/Actualizar/{{$res->id}}" class="btn btn-warning" ><b>Actualizar</b></a>
+                    <a href="/Borrar/{{$res->id}}" class="btn btn-danger" onclick="return confirm('¿Desea ELIMINAR este PAQUETE?')"><b>Eliminar</b></a>
                 </td>
             </tr>
         @endforeach

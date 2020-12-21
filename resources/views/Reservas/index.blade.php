@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="table-responsive m-5">
+<div class="table-responsive ">
     <table class="table">
         <h2 class="text-danger justify-heading"> <b>Reservas:</b> </h2>
         <div class="form-group">
@@ -46,7 +46,7 @@
                 <td>{{ $res->total }}</td>
                 <td>
                     <a href="{{route('reserva.update',$res)}}" class="btn btn-danger"><b>Actualizar</b></a>
-                    <a href="{{route('reserve.delete', $res)}}" class="btn btn-warning"><b>Eliminar</b></a>
+                    <a href="{{route('reserve.delete', $res)}}" class="btn btn-warning" onclick="return confirm('¿Desea ELIMINAR este PAQUETE?')"><b>Eliminar</b></a>
                 </td>
             </tr>
 

@@ -55,21 +55,40 @@
 
         <div class="container mb-5 mt-5">
 
-            <div class="row mt-5">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
-                    <form action="">
-                        <div class="form-group">
-                            <input type="search" name="" placeholder="Buscar..." required size="50px"> 
-                            <input type="submit" class="btn btn-success" value="Buscar">
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-            <div class="row mt-3">
+            <div class="row">
                 <div class="col-md-12">
-                    <!--En aqui mostrara la información que el cliente busco -->
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" style="height:100vh" >
+                                <img class="d-block w-100" src="https://i.ytimg.com/vi/n5dooQMzFi0/maxresdefault.jpg" alt="First slide">
+                                <div class="carousel-caption d-none d-md-block">
+                                </div>
+                            </div>
+                            <div class="carousel-item" style="height:100vh">
+                                <img class="d-block w-100" src="https://i.ytimg.com/vi/MmpX5eLf9eQ/maxresdefault.jpg" alt="Second slide">
+                                <div class="carousel-caption d-none d-md-block">
+                                </div>
+                            </div>
+                            <div class="carousel-item" style="height:100vh">
+                                <img class="d-block w-100" src="https://viajes.nationalgeographic.com.es/medio/2018/12/18/amazonia-peruana_6b936ba1_1600x1067.jpg" alt="Third slide">
+                                <div class="carousel-caption d-none d-md-block">
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Anterior</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Siguiente</span>
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -127,5 +146,7 @@
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <!--Iconos-->
+        <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
     </body>
 </html>

@@ -21,13 +21,15 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     
-    
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
             <div class="container">
-                <a class="navbar-brand" href="#">Logooo</a>
+                <a class="navbar-brand" href="#">
+                    <img src="https://blog.elinsignia.com/wp-content/uploads/2019/06/viajes-jairan-1.png" height="70px" />
+                </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -44,40 +46,35 @@
                         @guest
 
                             <li class="nav-item">
-                                <a class="nav-link" href="/">Inicio</a>
+                                <a class="nav-link text-dark letra-nav" href="/"><b>Inicio</b></a>
                             </li>
 
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Iniciar Sesión') }}</a>
-                                </li>
-                            @endif
-                            
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Registrarse') }}</a>
+                                    <a class="nav-link text-dark letra-nav" href="{{ route('login') }}"><b>{{ __('Iniciar Sesión') }}</b></a>
                                 </li>
                             @endif
                             
                         @else
                             <li class="nav-item dropdown">
-                                <a class="nav-link " href="#" role="button"  aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a class="nav-link  text-dark letra-nav" href="#" role="button"  aria-haspopup="true" aria-expanded="false" v-pre>
                                     <b>{{ Auth::user()->name }}</b>
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="/home">Paquetes</a>
+                                <a class="nav-link text-dark letra-nav" href="/home"><b>Paquetes</b></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/reservas">Reservas</a>
+                                <a class="nav-link text-dark letra-nav" href="/reservas"><b>Reservas</b></a>
                             </li>
 
+
                             <li class="nav-item dropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                <a class="dropdown-item text-dark letra-nav" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Cerrar Sesión') }}
+                                        <b>{{ __('Cerrar Sesión') }}</b>
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
