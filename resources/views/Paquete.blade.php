@@ -63,7 +63,6 @@
                     <button class="btn btn-outline-success" type="submit" style="width:75px; transform:translateX(400px)">Buscar</button>
                     </form>
                 </div>
-                </center>
             </div>
 
             <div class="row">
