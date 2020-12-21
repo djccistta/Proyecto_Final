@@ -35,16 +35,13 @@ Route::get('/reservar', function () {
 Auth::routes(['reset'=>false]);
 //index con lista de paquetes
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');;
-//admin
+            /* //CRUD de reservas para el administrador */
 Route::get('/reservas', [App\Http\Controllers\HomeController::class, 'reservas'])->middleware('auth');;
 //muestra el formulario de reservas
 Route::get('/reservas.nuevo', [App\Http\Controllers\ReservaController::class, 'nuevo'])->name('nuevo')->middleware('auth');;
 //guarda en la base de datos
 Route::post('/reserva.nuevo',[App\Http\Controllers\ReservaController::class, 'savereserve'])
 ->name('savereserve')->middleware('auth');;
-
-
-
 //lista las reservas
 Route::get('/reservas', [App\Http\Controllers\ReservaController::class, 'lista'])
 ->name('reserva.lista')->middleware('auth');;
@@ -56,14 +53,13 @@ Route::get('/actualizar/{id}',[App\Http\Controllers\ReservaController::class, 'u
 ->name("reserva.update")->middleware('auth');;
 Route::POST('/actualizar',[App\Http\Controllers\ReservaController::class, 'updatesave'])
 ->name("update.save")->middleware('auth');;
-//fin admin
-//usuario
+            /* //fin administrador */
+//muestra al usuario el formulario de reservas con la reserva seleccionada
 Route::get('/reserva-tour/{id}',[App\Http\Controllers\ReservaController::class, 'reservapaquete'])
 ->name("reserva-tour");
+//guarda la reserva desde la vista del usuario
 Route::get('/reservar',[App\Http\Controllers\ReservaController::class, 'savereserva'])
 ->name('reserva.save');
-/* Route::POST('/',[App\Http\Controllers\ReservaController::class, 'updatesave'])
-->name("update.save"); */
 
 
 //RUTAS PARA EL CRUD DE PAQUETES
