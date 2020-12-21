@@ -34,27 +34,27 @@ Route::get('/reservar', function () {
 
 Auth::routes(['reset'=>false]);
 //index con lista de paquetes
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('Admin');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');;
 //admin
-Route::get('/reservas', [App\Http\Controllers\HomeController::class, 'reservas'])->name('Admin');
+Route::get('/reservas', [App\Http\Controllers\HomeController::class, 'reservas'])->middleware('auth');;
 //muestra el formulario de reservas
-Route::get('/reservas.nuevo', [App\Http\Controllers\ReservaController::class, 'nuevo'])->name('nuevo');
+Route::get('/reservas.nuevo', [App\Http\Controllers\ReservaController::class, 'nuevo'])->name('nuevo')->middleware('auth');;
 //guarda en la base de datos
 Route::post('/reserva.nuevo',[App\Http\Controllers\ReservaController::class, 'savereserve'])
-->name('savereserve');
+->name('savereserve')->middleware('auth');;
 Route::post('/reservar',[App\Http\Controllers\ReservaController::class, 'savereserva'])
-->name('reserva.save');
+->name('reserva.save')->middleware('auth');;
 //lista las reservas
 Route::get('/reservas', [App\Http\Controllers\ReservaController::class, 'lista'])
-->name('reserva.lista');
+->name('reserva.lista')->middleware('auth');;
 //elimina un reserva
 Route::get('/elimina/{res}',[App\Http\Controllers\ReservaController::class, 'delete'])
-->name("reserve.delete");
+->name("reserve.delete")->middleware('auth');;
 //actualizacion de reservas
 Route::get('/actualizar/{id}',[App\Http\Controllers\ReservaController::class, 'update'])
-->name("reserva.update");
+->name("reserva.update")->middleware('auth');;
 Route::POST('/actualizar',[App\Http\Controllers\ReservaController::class, 'updatesave'])
-->name("update.save");
+->name("update.save")->middleware('auth');;
 //fin admin
 //usuario
 Route::get('/reserva-tour/{id}',[App\Http\Controllers\ReservaController::class, 'reservapaquete'])
