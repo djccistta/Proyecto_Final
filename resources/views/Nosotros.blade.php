@@ -55,48 +55,87 @@
         <div class="container mt-5 mb-5">
             <div class="row">
                 <div class="col-md-12">
-                    <h1>AGENCIA DE VIAJES EN PERU</h1>
-                    <h4>Turismo de Calidad</h4>
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" style="height:100vh" >
+                                <img class="d-block w-100" src="https://lh3.googleusercontent.com/proxy/AXI5ieeYXfSG4THzdtB-EhR6zEX8yi1C2X0iCpvfqecnEWzyErLCo2wtAm-Y5bk1rMNxEvKRxcmMwOoU4fiSgdX3VU6z40TdTqFlv7_-A2ivyJLRMEOO5Fgk7OEGiH7lPi5qM0gt6WKX8bg" alt="First slide">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h1 >AGENCIA DE VIAJES EN PERU</h1>
+                                    <p>Turismo de Calidad</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item" style="height:100vh">
+                                <img class="d-block w-100" src="https://ak.picdn.net/shutterstock/videos/6529877/thumb/1.jpg" alt="Second slide">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h1>AGENCIA DE VIAJES EN PERU</h1>
+                                    <p>Turismo de Calidad</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item" style="height:100vh">
+                                <img class="d-block w-100" src="https://i.pinimg.com/originals/10/f3/cb/10f3cbc7a73edb7e228b68842e57ea7a.jpg" alt="Third slide">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h1>AGENCIA DE VIAJES EN PERU</h1>
+                                    <p>Turismo de Calidad</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Anterior</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Siguiente</span>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-            <div class="col-md-12">
-                <h3>Quienes Somos</h3>
-                <hr/>
-                <p>
-                    Somos una agencia de viajes y operador turístico que brinda servicios de turismo en Perú, con altos estándares de calidad y seguridad para nuestros clientes, satisfaciendo sus expectativas con un staff de profesionales con vasta experiencia en turismo, brindando asesoría para su elección de paquetes con tarifas competitivas, ofertas a la medida de cada cliente usando el desarrollo tecnológico para facilitar distintos canales de pago.
-                    Versátil a la necesidad mas exigente de cada cliente.
-                </p>
+            <div class="row mt-3">
+                <div class="col-md-12">
+                    <h3 style="color: darkblue;">Quienes Somos</h3>
+                    <hr/>
+                    <p>
+                        Somos una agencia de viajes y operador turístico que brinda servicios de turismo en Perú, con altos estándares de calidad y seguridad para nuestros clientes, satisfaciendo sus expectativas con un staff de profesionales con vasta experiencia en turismo, brindando asesoría para su elección de paquetes con tarifas competitivas, ofertas a la medida de cada cliente usando el desarrollo tecnológico para facilitar distintos canales de pago.
+                        Versátil a la necesidad mas exigente de cada cliente.
+                    </p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <h4>Misión</h4>
+                    <h4 style="color: darkblue;">Misión</h4>
+                    <hr/>
                     <p>
                         Contribuir con el desarrollo del turismo en nuestro país, de manera sostenible, brindando servicios de calidad con valor agregado cubriendo las expectativas de nuestros clientes como “una experiencia inolvidable”.
                     </p>
                 </div>
                 <div class="col-md-6">
-                    <h4>Visión</h4>
+                    <h4 style="color: darkblue;">Visión</h4>
+                    <hr/>
                     <p>
                         Ser reconocida como la mejor empresa de turismo en el Perú, comprometida en el desarrollo e innovación de servicio y calidad para beneficio de nuestros clientes.
                     </p>
                 </div>
             </div>    
             <div class="row">
-                <h4>Valores</h4>
-                <div class="col-md-4">
-                    <p><ion-icon name="arrow-forward-circle-outline"></ion-icon>Integridad.</p>
-                    <p><ion-icon name="arrow-forward-circle-outline"></ion-icon>Honestidad.</p>
-                    <p><ion-icon name="arrow-forward-circle-outline"></ion-icon>Servicio.</p>
+                <h4 style="color: darkblue;">Valores</h4>
+                <hr/>
+                <div class="col-md-4" >
+                    <p class="icono"><ion-icon name="arrow-forward-circle-outline" class="text-danger" style="opacity: 50%;"></ion-icon>Integridad.</p>
+                    <p class="icono"><ion-icon name="arrow-forward-circle-outline" class="text-danger" style="opacity: 50%;"></ion-icon>Honestidad.</p>
+                    <p class="icono"><ion-icon name="arrow-forward-circle-outline" class="text-danger" style="opacity: 50%;"></ion-icon>Servicio.</p>
                 </div>
                 <div class="col-md-4">
-                    <p><ion-icon name="arrow-forward-circle-outline"></ion-icon>Lealtad.</p>
-                    <p><ion-icon name="arrow-forward-circle-outline"></ion-icon>Seguridad.</p>
-                    <p><ion-icon name="arrow-forward-circle-outline"></ion-icon>Plena Satisfacción del Cliente.</p>
+                    <p class="icono"><ion-icon name="arrow-forward-circle-outline" class="text-danger" style="opacity: 50%;"></ion-icon>Lealtad.</p>
+                    <p class="icono"><ion-icon name="arrow-forward-circle-outline" class="text-danger" style="opacity: 50%;"></ion-icon>Seguridad.</p>
+                    <p class="icono"><ion-icon name="arrow-forward-circle-outline" class="text-danger" style="opacity: 50%;"></ion-icon>Plena Satisfacción del Cliente.</p>
                 </div>
                 <div class="col-md-4">
-                    <p><ion-icon name="arrow-forward-circle-outline"></ion-icon>
+                    <p class="icono"><ion-icon name="arrow-forward-circle-outline" class="text-danger" style="opacity: 50%;"></ion-icon>
                         Pensando en su seguridad y comodidad contamos con diversas formas de pago con tarjeta de debito o crédito visa, con link con cualquier tarjeta de crédito, transferencias electrónicas, depósitos en cuentas bancarias, transferencias via wester union, transferencias interbancaria y otros.
                     </p>   
                 </div>

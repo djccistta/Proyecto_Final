@@ -55,13 +55,48 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="texto">Contáctenos</h1>
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" style="height:100vh" >
+                                <img class="d-block w-100" src="https://i.ytimg.com/vi/n5dooQMzFi0/maxresdefault.jpg" alt="First slide">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h1 >CONTACTANOS</h1>
+                                </div>
+                            </div>
+                            <div class="carousel-item" style="height:100vh">
+                                <img class="d-block w-100" src="https://i.ytimg.com/vi/MmpX5eLf9eQ/maxresdefault.jpg" alt="Second slide">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h1 >CONTACTANOS</h1>
+                                </div>
+                            </div>
+                            <div class="carousel-item" style="height:100vh">
+                                <img class="d-block w-100" src="https://viajes.nationalgeographic.com.es/medio/2018/12/18/amazonia-peruana_6b936ba1_1600x1067.jpg" alt="Third slide">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h1 >CONTACTANOS</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Anterior</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Siguiente</span>
+                        </a>
+                    </div>
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row mt-5">
                 <div class="col-md-6">
-                    <h3>¡Queremos Ayudarte!</h3>
+                    <h3 style="color: rgb(169, 0, 0);">¡Queremos Ayudarte!</h3>
+                    <hr/>
                     <p>
                         Si tienes alguna duda o consulta, puedes usar este formulario o comunicarte con nosotros al 
                         +51 987 654 321.
@@ -73,16 +108,21 @@
                         <br>
                         <b>Oficinas Cusco:</b>
                         <br>
-                        Av. Sol #543
+                        <ion-icon name="arrow-forward-circle-outline" class="text-danger" style="opacity: 50%;"></ion-icon>Av. Sol #543
                         <br>
                         <br>
                         <b> Teléfono:</b>
                         <br>
-                        +51 987 654 321.
+                        <ion-icon name="arrow-forward-circle-outline" class="text-danger" style="opacity: 50%;"></ion-icon>+51 965 131 044.
+                        <br>
+                        <ion-icon name="arrow-forward-circle-outline" class="text-danger" style="opacity: 50%;"></ion-icon>+51 934 996 407.
+                        <br>
+                        <ion-icon name="arrow-forward-circle-outline" class="text-danger" style="opacity: 50%;"></ion-icon>+51 974 254 763.
                     </p>
                 </div>
                 <div class="col-md-6">
-                    <h3>¡¡¡Llámanos o aún mejor visitanos!!!</h3>
+                    <h3 style="color: rgb(169, 0, 0);">¡¡¡Llámanos o aún mejor visitanos!!!</h3>
+                    <hr/>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3879.2373095517764!2d-71.97649956776425!3d-13.521023021637795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916dd60aaee7a475%3A0x8c755f455f9b9804!2sAv%20El%20Sol%2C%20Cusco%2008002!5e0!3m2!1ses!2spe!4v1608313808384!5m2!1ses!2spe" width="650" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
             </div>        
