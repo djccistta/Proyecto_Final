@@ -35,7 +35,7 @@
             <div class="form-group">
                 <label for="cel"> N° Celular:</label>
                 <input type="text" value="{{ $res->telefono }}" name="ncelular" class="form-control" id="cel" placeholder="Ingrese Número de Celular" Required>
-            </div>?
+            </div>
             <div class="form-group">
                 <label for="fecha"> Fecha de Tour:</label>
                 <input type="date" value="{{ $res->fecha }}" name="ftour" class="form-control" id="Fecha" placeholder="--/--/----" Required>

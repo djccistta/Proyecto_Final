@@ -97,7 +97,7 @@
                         <h5 class="card-title">Nombre: {{$paquete->nombre}}</h5>
                         <p class="card-text">Detalles: {{$paquete->descripcion}}</p>
                         <p class="card-text">Precio: S/.{{$paquete->precio}}</p>
-                        <a href="/reservar" class="btn btn-primary">Reservar</a>
+                        <a href="{{ route('reserva-tour',$paquete->id) }}" class="btn btn-primary">Reservar</a>
                     </div>
                 </div>
                 @endif
