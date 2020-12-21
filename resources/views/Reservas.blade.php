@@ -58,9 +58,10 @@
                     <div class="card mt-3" style="width: 18rem;">
                         <img class="card-img-top" src="{{ asset('storage').'/'.$paquete->foto}}" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">Nombre del Paquete: {{$paquete->nombre}}</h5>
-                            <p class="card-text">Detalles: {{$paquete->descripcion}}</p>
-                            <p class="card-text">Precio: {{$paquete->precio}}</p>
+                            <h5 class="card-title"><b>Nombre del Paquete:</b> <br> {{$paquete->nombre}}</h5>
+                            <p class="card-text"><b>Detalles:</b><br> {{$paquete->descripcion}}</p>
+                            <p class="card-text"><b>Precio por Adulto:</b><br> S/. {{$paquete->precio}}</p>
+                            <p class="card-text"><b>Precio por Niño:</b><br> S/. {{$paquete->precio/2}}</p>
                         </div>
                     </div>
                 </div>
@@ -107,6 +108,10 @@
                         <div class="form-group">
                             <label for="niños"> N° Niños:</label>
                             <input type="number" name="nniños" class="form-control"  id="niños" placeholder="Ingrese Número de Niños" Required>
+                        </div>
+                        <div class="form-group">
+                            <label for="total"> Total:</label>
+                            <input type="text" name="total" class="form-control"  id="total" placeholder="Total..." value="" readonly>
                         </div>
 
                         <div class="form-group">
