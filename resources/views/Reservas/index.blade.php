@@ -45,7 +45,7 @@
                 <td>{{ $res->nroniños }}</td>
                 <td>
                     <a href="{{route('reserva.update',$res)}}" class="btn btn-danger"><b>Actualizar</b></a>
-                    <a href="{{route('reserve.delete', $res)}}" class="btn btn-warning"><b>Eliminar</b></a>
+                    <a href="{{route('reserve.delete', $res)}}" class="btn btn-warning" onclick="return confirm('¿Desea ELIMINAR este PAQUETE?')"><b>Eliminar</b></a>
                 </td>
             </tr>
 
