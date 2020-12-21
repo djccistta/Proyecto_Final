@@ -80,7 +80,7 @@
                 @foreach($Paquete as $paquete)
                 @if($paquete->categoria=="Nacional")
                 <div class="card mt-3" style="width: 18rem;">
-                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <img class="card-img-top" src="{{ asset('storage').'/'.$paquete->foto}}" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Nombre: {{$paquete->nombre}}</h5>
                         <p class="card-text">Detalles: {{$paquete->descripcion}}</p>
