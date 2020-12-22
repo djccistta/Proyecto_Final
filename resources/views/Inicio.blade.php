@@ -92,17 +92,6 @@
                 </div>
             </div>
 
-            <div class="row mt-5">
-                <div class="col-md-12">
-                    <h3 class=" text-danger"> <b> Promociones</b></h3>
-                </div>
-            </div>
-            <div class="row mt-3">
-                <div class="col-md-12">
-                    <!--En aqui mostrara las promociones -->
-
-                </div>
-            </div>
 
         </div>
 
