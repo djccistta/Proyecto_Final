@@ -91,25 +91,18 @@
 
                 <h2 class="text-danger"> <b>Paquetes Nacionales:</b> </h2>
                 @foreach($Paquete as $paquete)
-                @if($paquete->categoria=="Nacional")
-                <div class="card mt-3" style="width: 18rem;">
-                    <img class="card-img-top" src="{{ asset('storage').'/'.$paquete->foto}}" alt="Card image cap">
-                    <div class="card-body">
-<<<<<<< HEAD
-                        <h5 class="card-title">Nombre: {{$paquete->nombre}}</h5>
-                        <p class="card-text">Detalles: {{$paquete->descripcion}}</p>
-                        <p class="card-text">Precio: S/.{{$paquete->precio}}</p>
-                        <a href="{{ route('reserva-tour',$paquete->id) }}" class="btn btn-primary">Reservar</a>
-=======
-                        <h5 class="card-title"><b>Nombre:</b><br> {{$paquete->nombre}}</h5>
-                        <p class="card-text"><b>Detalles:</b><br> {{$paquete->descripcion}}</p>
-                        <p class="card-text"><b>Precio por Adulto:</b><br> S/. {{$paquete->precio}}</p>
-                        <p class="card-text"><b>Precio por Niño:</b><br> S/. {{$paquete->precio/2}}</p>
-                        <a href="{{ route('reserva-tour',$paquete->id) }}" class="btn btn-primary">Reservar</a>
->>>>>>> 3033ec1f530f8930beaddcabec4d92ddb939a532
+                    @if($paquete->categoria=="Nacional")
+                    <div class="card mt-3" style="width: 18rem;">
+                        <img class="card-img-top" src="{{ asset('storage').'/'.$paquete->foto}}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>Nombre:</b><br> {{$paquete->nombre}}</h5>
+                            <p class="card-text"><b>Detalles:</b><br> {{$paquete->descripcion}}</p>
+                            <p class="card-text"><b>Precio por Adulto:</b><br> S/. {{$paquete->precio}}</p>
+                            <p class="card-text"><b>Precio por Niño:</b><br> S/. {{$paquete->precio/2}}</p>
+                            <a href="{{ route('reserva-tour',$paquete->id) }}" class="btn btn-primary">Reservar</a>
+                        </div>
                     </div>
-                </div>
-                @endif
+                    @endif
                 @endforeach
 
             </div>
